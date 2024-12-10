@@ -10,7 +10,7 @@ pipeline {
         
         stage('Checkout'){
            steps {
-                git credentialsId: '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', 
+                // git credentialsId: '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', 
                 url: 'https://github.com/venkat9618/python-jenkins-argocd-k8s.git',
                 branch: 'master'
                 // git clone 'https://github.com/venkat9618/python-jenkins-argocd-k8s.git'
