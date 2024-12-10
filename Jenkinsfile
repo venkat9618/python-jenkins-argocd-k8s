@@ -34,7 +34,9 @@ pipeline {
                 script{
                     sh '''
                     echo 'Push to Repo'
-                    docker push galiahv/cicd-e2e:${BUILD_NUMBER}
+                    docker.withRegistry('https://index.docker.io/v1/', "docker") {
+                    dockerImage.push()
+                    // docker push galiahv/cicd-e2e:${BUILD_NUMBER}
                     '''
                 }
             }
